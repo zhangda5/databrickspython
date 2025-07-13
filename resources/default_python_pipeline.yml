@@ -3,11 +3,11 @@ resources:
   pipelines:
     default_python_pipeline:
       name: default_python_pipeline
-      catalog: main
+      catalog: default
       target: default_python_${bundle.environment}
       libraries:
         - notebook:
             path: ../src/dlt_pipeline.ipynb
 
       configuration:
-        bundle.sourcePath: /Workspace/${workspace.file_path}/src
+        bundle.sourcePath: /${workspace.file_path}/src

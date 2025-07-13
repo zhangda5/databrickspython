@@ -3,7 +3,7 @@ resources:
   pipelines:
     default_python_pipeline:
       name: default_python_pipeline
-      catalog: default
+      catalog: databrickscicd
       target: default_python_${bundle.environment}
       libraries:
         - notebook:

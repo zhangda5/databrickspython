@@ -35,35 +35,3 @@ jobs:
         env:
           DATABRICKS_TOKEN: ${{ secrets.PAT }}
           DATABRICKS_BUNDLE_ENV: dev
-
-#   pipeline_update:
-#     name: "Run pipeline update"
-#     runs-on: ubuntu-latest
-#     defaults:
-#       run:
-#         working-directory: ./simple_project
-
-#     needs:
-#       - deploy
-
-#     steps:
-#       - uses: actions/checkout@v3
-
-# #       - uses: actions/setup-python@v4
-# #         with:
-# #           python-version: 3.11
-# #           cache: 'pip'
-
-# #       - run: pip install -r requirements.txt
-# #         working-directory: .github/support
-
-#       - uses: databricks/setup-cli@main
-
-#       - shell: bash
-#         name: Run e2e test workflow
-#         run: |
-#           set -o pipefail
-#           databricks bundle run notebook_validation_job --refresh-all 2>&1 | tee output.log
-#         env:
-#           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-#           DATABRICKS_BUNDLE_ENV: dev
